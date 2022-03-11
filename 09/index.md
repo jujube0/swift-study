@@ -31,11 +31,11 @@ class 클래스 이름 {
 </aside>
 
 1. 클래스의 인스턴스끼리 같은 침조임을 확인하기 위해서는 **식별 연산자(identity operators)**를 이용한다
-    
+
     ```swift
     instanceA === instanceB
     ```
-    
+
 2. 스위프트의 기본 데이터 타입은 모두 구조체이다.
-    
+
     그러므로 모두 value type임을 기억하자.

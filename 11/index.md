@@ -1,8 +1,5 @@
 # 11.인스턴스 생성 및 소멸
 
-Created: March 11, 2022 8:21 PM
-Tags: 2부 객체지향 프로그래밍과 스위프트
-
 # 1. 인스턴스 생성
 
 클래스, 구조체 enum에서 initializer를 만들 수 있다.
@@ -43,7 +40,7 @@ init 대신 **init?** 키워드를 사용한다. 초기화에 성공한 경우�
 ```swift
 enum Student: String {
 	case elementary, middle, high
-	
+
 	init?(age: Int) {
 		switch age {
 		case 8...13:
@@ -60,14 +57,14 @@ enum Student: String {
 
 **함수를 사용한 프로퍼티 기본값 설정**
 
-연산을 통해 stored property의 디폴트 값을 설정하고 싶을 때 클로저나 함수를 사용할 수 있다. 인스턴스 초기화시 클로저가 호출되면서 연산의 결과값을 기본값으로 제공해준다. 
+연산을 통해 stored property의 디폴트 값을 설정하고 싶을 때 클로저나 함수를 사용할 수 있다. 인스턴스 초기화시 클로저가 호출되면서 연산의 결과값을 기본값으로 제공해준다.
 
 클로저의 반환 타입과 프로퍼티의 타입은 일치해야하고, 해당 클로저가 실행되는 시점은 인스턴스의 다른 프로퍼티 값이 설정되기 전이기 때문에 다른 프로퍼티의 값을 이용할 수 없다. 같은 이유로 self를 사용하거나 인스턴스 메서드를 호출하는 것도 불가하다.
 
 ```swift
 class SomeClass {
 	let someProperty: SomeType = {
-		// 
+		//
 		return someValue
 	}() // 소괄호를 통해 해당 클로저를 실행해준다.
 }
@@ -81,4 +78,3 @@ class SomeClass {
 
 - 하나의 클래스에서 *deinit* 은 하나만 구현 가능하다.
 - 모든 프로퍼티에 접근 가능하다.
--

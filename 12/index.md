@@ -1,8 +1,4 @@
-# 12.접근 제어
-
-Created: March 11, 2022 8:21 PM
-Tags: 2부 객체지향 프로그래밍과 스위프트
-
+## 접근 제어
 # 1. 접근 제어
 
 코드끼리 상호작용을 할 때 파일 간 또는 모듈 간에 접근을 제한할 수 있는 기능. 코드의 상세 구현은 숨기고 허용된 기능만 사용하는 인터페이스를 제공할 수 있다.
@@ -11,7 +7,7 @@ Tags: 2부 객체지향 프로그래밍과 스위프트
 
 **public**
 
-: 프레임워크에서 외부와 연결된 인터페이스를 구현하는데 주로 쓰인다. 
+: 프레임워크에서 외부와 연결된 인터페이스를 구현하는데 주로 쓰인다.
 
 **open**
 
@@ -58,7 +54,7 @@ setter에게만 더 낮은 접근 수준을 부여하여 읽기 전용으로 만
 public struct SomeType {
 	// 외부에서는 get만 이용 가능
 	public private(set) var publicGetOnlyStoredProperty: Int = 0
-	
+
 	// 외부에서는 get만 이용 가능
 	internal private(set) var internalGetOnlyComputedProperty: Int {
 		get {
@@ -67,6 +63,6 @@ public struct SomeType {
 		set {
 			count += 1
 		}
-	}	
+	}
 }
 ```

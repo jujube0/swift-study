@@ -1,11 +1,8 @@
 # 10.프로퍼티와 메서드
 
-Created: March 11, 2022 8:21 PM
-Tags: 2부 객체지향 프로그래밍과 스위프트
-
 # 프로퍼티
 
-프로퍼티는 크게 
+프로퍼티는 크게
 
 - 저장 프로퍼티**stored property**
 - 연산 프로퍼티**computed property**
@@ -19,11 +16,11 @@ Tags: 2부 객체지향 프로그래밍과 스위프트
 
 `var` 은 변수 저장 프로퍼티, `let` 은 상수 저장 프로퍼티.
 
-클래스 또는 구조체의 **인스턴스**와 연관된 값을 저장한다. 
+클래스 또는 구조체의 **인스턴스**와 연관된 값을 저장한다.
 
 - 지연 저장 프로퍼티 **lazy stored properties**
 
-호출이 있을 때 값을 초기화한다. 
+호출이 있을 때 값을 초기화한다.
 
 불필요한 성능저하나 공간 낭비를 줄일 수 있다.
 
@@ -39,7 +36,7 @@ lazy 키워드를 사용하여 정의하면 된다.
 struct CoordinatePoint {
 	var x: Int
 	var y: Int
-	
+
 	var oppositePoint: CoordinatePoint {
 		get {
 			return CoordinatePoint(x: -x, y: -y)
@@ -92,9 +89,9 @@ global variables → 함수, 메서드, 클로져, 타입 밖에서 선언된 �
 
 local variables → 함수, 메서드, 클로져 내에서 선언된 변수
 
-전역 변수, 전역 상수는 lazy stored property처럼 처음 접근할 때 연산이 이루어진다. 
+전역 변수, 전역 상수는 lazy stored property처럼 처음 접근할 때 연산이 이루어진다.
 
-반대로 지역번수와 지역 상수는 절대로 지연 연산되지 않는다. 
+반대로 지역번수와 지역 상수는 절대로 지연 연산되지 않는다.
 
 ## 5. 타입 프로퍼티
 
@@ -130,7 +127,7 @@ print(macbook[keyPath: nameKeyPath]) // Macbook Pro
 
 → 타입 간의 의존성을 낮출 수 있다.
 
-→ 자기 자신은 `\.self` 
+→ 자기 자신은 `\.self`
 
 # 메서드
 
@@ -154,7 +151,7 @@ print(macbook[keyPath: nameKeyPath]) // Macbook Pro
 
 **self property**
 
-모든 인스턴스는 암시적으로 생성된 self 프로퍼티를 갖는다. 
+모든 인스턴스는 암시적으로 생성된 self 프로퍼티를 갖는다.
 
 ## 2. 타입 메서드
 
